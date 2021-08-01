@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mastache语法</title>
+    <title>v-html</title>
 </head>
 <body>
-<div id="app">{{firstName + lastName}}</div>
+<div id="app">
+    <h2>{{url}}</h2>
+    <h2 v-html="url"></h2>
+</div>
 <script src="../common/js/vue.js"></script>
 <script>
     const app = new Vue({
         el: '#app',
         data: {
-            firstName: '早安',
-            lastName: 'NanJing'
+            url: '<a href="http://www.baidu.com">百度一下，你就知道</a>'
         }
     });
+
 </script>
 </body>
 </html>

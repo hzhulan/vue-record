@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mastache语法</title>
+    <title>v-once只初始化一次，修改后不会变化</title>
 </head>
 <body>
-<div id="app">{{firstName + lastName}}</div>
+<div id="app">
+    <h2>{{message}}</h2>
+    <h2 v-once>{{message}}</h2>
+</div>
 <script src="../common/js/vue.js"></script>
 <script>
     const app = new Vue({
         el: '#app',
         data: {
-            firstName: '早安',
-            lastName: 'NanJing'
+            message: '早安',
         }
     });
+
+    app.message = '你好'
 </script>
 </body>
 </html>
