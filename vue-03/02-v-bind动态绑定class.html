@@ -16,6 +16,7 @@
 <body>
 <div id="app">
     <h2 :class="{active: isActive, line: isLine}">{{message}}</h2>
+    <button @click="change">切换颜色</button>
 </div>
 <script src="../common/js/vue.js"></script>
 <script>
@@ -25,6 +26,12 @@
             message: 'http://www.baidu.com',
             isActive: false,
             isLine: true
+        },
+        methods: {
+            change: function () {
+                this.isActive = !this.isActive;
+                this.isLine = !this.isLine
+            }
         }
     });
 
