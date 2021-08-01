@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态绑定v-bind:,简写:</title>
+</head>
+<body>
+<div id="app">
+    <a v-bind:href="search">百度一下</a>
+
+    <!--  语法糖简写:  -->
+    <img :src="url" style="width: 100%;"></div>
+</div>
+<script src="../common/js/vue.js"></script>
+<script>
+    setTimeout(function () {
+        const app = new Vue({
+            el: '#app',
+            data: {
+                url: './img/1.jpg',
+                search: 'http://www.baidu.com'
+            }
+        });
+    }, 1000);
+
+
+</script>
+</body>
+</html>
